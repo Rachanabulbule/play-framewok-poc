@@ -1,0 +1,17 @@
+@(bookform:Form[Book])(implicit messages: play.api.i18n.Messages)
+@import helper._
+<html>
+<head>
+    <title> create Book</title>
+</head>
+<body>
+<h1>Insert Book Record</h1>
+@form(action=routes.BookController.save()){
+@inputText(bookform("id"))
+@inputText(bookform("bookName"))
+@inputText(bookform("author"))
+<input type="submit" value="Submit">
+}
+</body>
+
+</html>
